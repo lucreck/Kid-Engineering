@@ -11,6 +11,8 @@ import android.view.WindowManager;
 
 public class CountingActivity extends Activity {
 
+    // Hang cua Phuong
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
