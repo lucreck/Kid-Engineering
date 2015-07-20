@@ -1,12 +1,16 @@
 package com.game.kidengineering.basicskills;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.GridView;
+import android.widget.Toast;
 
 
 public class MenuActivity extends Activity {
@@ -17,6 +21,24 @@ public class MenuActivity extends Activity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_menu);
+
+        GridView gridview = (GridView) findViewById(R.id.gridview);
+        gridview.setAdapter(new ImageAdapter(this));
+
+        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View v,
+                                    int position, long id) {
+                Toast.makeText(MenuActivity.this, "" + position,
+                        Toast.LENGTH_SHORT).show();
+                switch (position){
+                    case 0:
+                        Intent i = new Intent(MenuActivity.this, CountingActivity.class);
+                        startActivity(i);
+                    break;
+
+                }
+            }
+        });
     }
 
     @Override
