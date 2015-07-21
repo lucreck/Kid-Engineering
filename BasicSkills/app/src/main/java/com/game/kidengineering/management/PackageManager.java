@@ -10,7 +10,7 @@ public class PackageManager {
 
     public PackageManager() {
         listPackage = new MyPackage[10];
-        // cái này s? load lên t? file
+
         listPackage[0] = new MyPackage(0,"counting", "icon_menu_0", true);
         listPackage[1] = new MyPackage(0,"letter", "icon_menu_1", true);
     }

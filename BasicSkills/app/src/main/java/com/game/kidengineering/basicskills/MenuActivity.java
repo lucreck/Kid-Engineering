@@ -30,12 +30,16 @@ public class MenuActivity extends Activity {
                                     int position, long id) {
                 Toast.makeText(MenuActivity.this, "" + position,
                         Toast.LENGTH_SHORT).show();
+                Intent i;
                 switch (position){
                     case 0:
-                        Intent i = new Intent(MenuActivity.this, CountingActivity.class);
+                        i = new Intent(MenuActivity.this, CountingActivity.class);
                         startActivity(i);
                     break;
-
+                    case 1:
+                        i = new Intent(MenuActivity.this, CountingTestActivity.class);
+                        startActivity(i);
+                        break;
                 }
             }
         });

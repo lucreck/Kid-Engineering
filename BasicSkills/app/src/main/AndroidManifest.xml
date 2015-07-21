@@ -24,6 +24,10 @@
             android:name=".CountingActivity"
             android:label="@string/title_activity_counting" >
         </activity>
+        <activity
+            android:name=".CountingTestActivity"
+            android:label="@string/title_activity_counting_test" >
+        </activity>
     </application>
 
 </manifest>
