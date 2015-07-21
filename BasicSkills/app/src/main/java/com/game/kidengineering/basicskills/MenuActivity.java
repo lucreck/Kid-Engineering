@@ -37,8 +37,7 @@ public class MenuActivity extends Activity {
                         startActivity(i);
                     break;
                     case 1:
-                        i = new Intent(MenuActivity.this, CountingTestActivity.class);
-                        startActivity(i);
+
                         break;
                 }
             }
